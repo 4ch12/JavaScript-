@@ -1,4 +1,4 @@
-/*let num = 42
+ /*let num = 42
 let firstName = 'Pavlo'
 const isProgramist = true */
 
