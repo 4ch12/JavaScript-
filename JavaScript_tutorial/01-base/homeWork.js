@@ -214,3 +214,63 @@ console.log(newArr)
 
 Закомментируйте функцию и напишите аналогичную, но в виде стрелочной функции. 
 */
+
+/*function sayHello(name = 'someone') {
+    console.log(`Hello, ${name}!`)
+}
+
+sayHello('ljl')
+
+const sayHello = (name = 'someone') => {
+    console.log(`Hello, ${name}!`);
+  };*/
+/*Задание #5
+Напишите функцию calc(), которая принимает в параметры a и b, а также operation. 
+В зависимости от переданной операции (+, -, /, *) возвращаем необходимый результат выражения с числами.
+*/ 
+
+/*function calc(a, b, operation) {
+
+const num1 = a
+const num2 = b
+if(operation === '+'){
+    return num1 + num2
+}else if (operation === '-'){
+    return num1 - num2
+}else if (operation === '*'){
+    return num1 * num2
+}else if (operation === '/'){
+    return num1 / num2
+}
+  }
+  
+  console.log(calc(1, 2, '+')); // 3
+  console.log(calc(1, 2, '-')); // -1
+  console.log(calc(2, 2, '*')); // 4
+  console.log(calc(4, 2, '/')); // 2
+*/
+
+  /*Задание #6
+
+Создайте переменную age, присвоив ей числовое значение.
+Создайте переменную category, присвоив ей с помощью тернарного оператора значение:
+"Взрослый" — если age больше или равно 18
+"Детский" — если age меньше 18
+Выведите переменные в консоль. */
+
+// const age = 24
+// const category = age < 18 ? 'Детский' : 'Взрослый'
+// console.log(age, category);
+
+/*Задание #7
+
+// Создайте переменные a и b с числовыми значениями.
+// Создайте переменную c, в которую с помощью тернарного оператора 
+присвоите наибольшее значение (или a, или b).
+// Выведите значение c в консоль.
+*/
+
+// const a = 10
+// const b = 2
+// const c = a > b ? a : b 
+// console.log(c)
