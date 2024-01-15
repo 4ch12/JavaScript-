@@ -50,14 +50,56 @@ resultElements.textContent = 42
 resultElements.textContent 
 */
 
-const resultElements = document.getElementById('result');
-const input1 = document.getElementById('input1');
-const input2 = document.getElementById('input2');
-const submitBtn = document.getElementById('submit'); // получение кнопку по айди из html
+const resultElements = document.getElementById("result");
+const input1 = document.getElementById("input1");
+const input2 = document.getElementById("input2");
+const submitBtn = document.getElementById("submit"); // получение кнопку по айди из html
+const plusBtn = document.getElementById("plus");
+const minusBtn = document.getElementById("minus");
+const multiplicationBtn = document.getElementById("multiplicationBtn");
+const divisionBtn = document.getElementById("division");
+let action = "+";
 
-
-
-submitBtn.onclick = function (){
-    const sum = Number(input1.value) + Number(input2.value)
-    resultElements.textContent  = sum 
+function printResult(result){
+    if (result < 0) {
+        resultElements.style.color = "red";
+    } else {
+        resultElements.style.color = "green";
+    }
+    resultElements.textContent = result;
 }
+
+function computeNumbersWithActions (inp1, inp2, actionSymbol){
+const num1 = Number(inp1.value)
+const num2 = Number(inp2.value)
+if(actionSymbol === '+'){
+    return num1 + num2
+}else if (actionSymbol === '-'){
+    return num1 - num2
+}else if (actionSymbol === '*'){
+    return num1 * num2
+}else if (actionSymbol === '/'){
+    return num1 / num2
+}
+}
+submitBtn.onclick = function () {
+    const result = computeNumbersWithActions(input1,input2,action)
+    printResult(result)
+};
+
+plusBtn.onclick = function () {
+  action = "+";
+};
+
+minusBtn.onclick = function () {
+  action = "-";
+}
+
+multiplication.onclick = function () {
+    action = "*";
+  }
+  
+divisionBtn.onclick = function () {
+    action = "/";
+  }
+  
