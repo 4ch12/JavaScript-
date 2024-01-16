@@ -96,7 +96,7 @@ listElement.onclick = function (event) {
 };
 
 function getNoteTempate(notes, index) {
-  console.log(notes.completed);
+ // console.log(notes.completed);
   return `
         <li
             class="list-group-item d-flex justify-content-between align-items-center"
