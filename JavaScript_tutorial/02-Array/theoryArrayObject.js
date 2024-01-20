@@ -86,13 +86,13 @@ log(person[key])
 
 
 /*OBJECT*/
-const people = [
-  {name: 'Roma', budget: 8800},
-  {name: 'Elena', budget: 4200},
-  {name: 'Vlad', budget: 2300},
-  {name: 'Uliana', budget: 3900},
-]
-
+// const people = [
+//   {name: 'Roma', budget: 8800},
+//   {name: 'Elena', budget: 4200},
+//   {name: 'Vlad', budget: 2300},
+//   {name: 'Uliana', budget: 3900},
+// ]
+// console.log(people)
 // let findedPerson
 // for (let person of people){
 // if (person.budget === 2300){
@@ -152,3 +152,111 @@ const people = [
 //   .filter((c) => c === !"!")
 //   .join('')
 // console.log (reversed)
+
+/*Задание #1
+
+Создайте 2 объекта john и ann с полями name, age, pet и заполните их именем, 
+возрастом и именем питомца соответственно.
+
+Создайте функцию, которая в параметры принимает объект человека (john или ann),
+ и в качестве результата выводит информацию о нем в консоль:
+
+“Меня зовут {name}, мне {age}, у меня есть питомец {pet}”
+
+Создайте функцию incrementAge(), которая в параметры принимает объект человека и 
+увеличивает ему возраст на 1.
+
+Выведите циклом все названия свойств и их значения, которые есть у объекта john.*/
+
+// const john = {
+//   name: 'John',
+//   age: '21',
+//   pet: 'Fufik'
+// }
+// const ann = {
+//   name: 'Ann',
+//   age: '23',
+//   pet: 'Zhopik'
+// }
+
+// function outputConsole (person){
+//   console.log(`Меня зовут ${person.name}, мне ${person.age}, у меня есть питомец ${person.pet}`)
+// }
+// outputConsole (ann)
+
+// function incrementAge(age) {
+//   console.log(age++)
+// }
+// incrementAge(ann.age)
+
+// for (key in john){
+//   console.log( key + " " + john[key])
+// }
+
+// const john = {
+//   name: 'John',
+//   age: 22,
+//   pet: 'cat'
+// };
+
+// const ann = {
+//   name: 'Ann',
+//   age: 24,
+//   pet: 'fish'
+// };
+
+// const info = ({name, age, pet}) => 
+// console.log(`Меня зовут ${name}, мне ${age}, у меня есть питомец ${pet}`);
+
+// const incrementAge = people => people.age++;
+
+// const display = people => {
+//   for(const [key, value] of Object.entries(people))
+//       console.log(`${key}: ${value}`);
+// }
+
+// display(john);
+
+// Задание #2
+// Создайте функцию, которая на вход принимает массив, а на выходе возвращает 
+// сумму его элементов:
+
+// function sum(array) {
+//  console.log( array.reduce((acc, p) => acc+p,0))
+
+// }
+
+// const arr = [1, 50, 20, 75, 90];
+
+// sum(arr); // 23
+
+// Задание #3
+
+// Создайте пустой массив names.
+// Добавьте в него 5 любых имен.
+// Выведите массив в консоль.
+// Уберите из начала и конца массива по 1 элементу.
+// Снова выведите массив в консоль.
+
+// const names = []
+// names.push('b')
+// names.push('b1')
+// names.push('b2')
+// names.push('b3')
+// console.log(names)
+
+// names.shift()
+// names.pop()
+
+// console.log(names);
+
+// Задание #4
+// Дан массив names. Необходимо сделать функцию, которая на основе 
+// этого массива генерирует строку c HTML. Она представляет из себя список 
+// элементов (<ul>), где каждый элемент списка (<li>) содержит элемент массива.
+
+const names = ['Bob', 'Klar', 'Petya', 'Ilya', 'Viktoriya'];
+const render = names => `<ul>${names.map(i => `<li>${i}</li>`).join('')}</ul>`;
+
+console.log(render(names))
+
